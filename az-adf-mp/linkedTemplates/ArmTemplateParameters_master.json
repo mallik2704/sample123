@@ -1,0 +1,75 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "az-adf-mp"
+		},
+		"AzureSqlDatabasesinksouers_connectionString": {
+			"value": ""
+		},
+		"FileServer1_password": {
+			"value": ""
+		},
+		"LS_ADLSGEN2_SOURSE_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_PAQUET_accountKey": {
+			"value": ""
+		},
+		"LS_Adls_Azsql_accountKey": {
+			"value": ""
+		},
+		"LS_BLOB_SOURSE_connectionString": {
+			"value": ""
+		},
+		"LS_FileServer_json data_password": {
+			"value": ""
+		},
+		"LS_adls_to_azsql_connectionString": {
+			"value": ""
+		},
+		"ds_sink to azsqlserver_connectionString": {
+			"value": ""
+		},
+		"ls_FileServer_blob_password": {
+			"value": ""
+		},
+		"ls_onprem_blobsqlserver_connectionString": {
+			"value": ""
+		},
+		"FileServer1_properties_typeProperties_host": {
+			"value": "F:\\az sample files"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"value": "mallik"
+		},
+		"LS_ADLSGEN2_SOURSE_properties_typeProperties_url": {
+			"value": "https://outputadlsgen2account.dfs.core.windows.net"
+		},
+		"LS_ADLS_PAQUET_properties_typeProperties_url": {
+			"value": "https://outputadlsgen2account.dfs.core.windows.net"
+		},
+		"LS_Adls_Azsql_properties_typeProperties_url": {
+			"value": "https://outputdatacontainer.dfs.core.windows.net"
+		},
+		"LS_FileServer_json data_properties_typeProperties_host": {
+			"value": "F:\\az sample files"
+		},
+		"LS_FileServer_json data_properties_typeProperties_userId": {
+			"value": "mallik"
+		},
+		"ls_FileServer_blob_properties_typeProperties_host": {
+			"value": "F:\\az sample files"
+		},
+		"ls_FileServer_blob_properties_typeProperties_userId": {
+			"value": "mallik"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

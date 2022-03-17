@@ -1,0 +1,202 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "az-adf-mp"
+		},
+		"AzureSqlDatabasesinksouers_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabasesinksouers'"
+		},
+		"FileServer1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'FileServer1'"
+		},
+		"LS_ADLSGEN2_SOURSE_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLSGEN2_SOURSE'"
+		},
+		"LS_ADLS_PAQUET_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLS_PAQUET'"
+		},
+		"LS_Adls_Azsql_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Adls_Azsql'"
+		},
+		"LS_BLOB_SOURSE_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_BLOB_SOURSE'"
+		},
+		"LS_FileServer_json data_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_FileServer_json data'"
+		},
+		"LS_adls_to_azsql_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_adls_to_azsql'"
+		},
+		"ds_sink to azsqlserver_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ds_sink to azsqlserver'"
+		},
+		"ls_FileServer_blob_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_FileServer_blob'"
+		},
+		"ls_onprem_blobsqlserver_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_onprem_blobsqlserver'"
+		},
+		"FileServer1_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "F:\\az sample files"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "mallik"
+		},
+		"LS_ADLSGEN2_SOURSE_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://outputadlsgen2account.dfs.core.windows.net"
+		},
+		"LS_ADLS_PAQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://outputadlsgen2account.dfs.core.windows.net"
+		},
+		"LS_Adls_Azsql_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://outputdatacontainer.dfs.core.windows.net"
+		},
+		"LS_FileServer_json data_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "F:\\az sample files"
+		},
+		"LS_FileServer_json data_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "mallik"
+		},
+		"ls_FileServer_blob_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "F:\\az sample files"
+		},
+		"ls_FileServer_blob_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "mallik"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "az-adf-mp_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureSqlDatabasesinksouers_connectionString": {
+						"value": "[parameters('AzureSqlDatabasesinksouers_connectionString')]"
+					},
+					"LS_ADLSGEN2_SOURSE_accountKey": {
+						"value": "[parameters('LS_ADLSGEN2_SOURSE_accountKey')]"
+					},
+					"LS_ADLS_PAQUET_accountKey": {
+						"value": "[parameters('LS_ADLS_PAQUET_accountKey')]"
+					},
+					"LS_Adls_Azsql_accountKey": {
+						"value": "[parameters('LS_Adls_Azsql_accountKey')]"
+					},
+					"LS_BLOB_SOURSE_connectionString": {
+						"value": "[parameters('LS_BLOB_SOURSE_connectionString')]"
+					},
+					"LS_adls_to_azsql_connectionString": {
+						"value": "[parameters('LS_adls_to_azsql_connectionString')]"
+					},
+					"ds_sink to azsqlserver_connectionString": {
+						"value": "[parameters('ds_sink to azsqlserver_connectionString')]"
+					},
+					"FileServer1_password": {
+						"value": "[parameters('FileServer1_password')]"
+					},
+					"LS_FileServer_json data_password": {
+						"value": "[parameters('LS_FileServer_json data_password')]"
+					},
+					"ls_FileServer_blob_password": {
+						"value": "[parameters('ls_FileServer_blob_password')]"
+					},
+					"LS_ADLSGEN2_SOURSE_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLSGEN2_SOURSE_properties_typeProperties_url')]"
+					},
+					"LS_ADLS_PAQUET_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLS_PAQUET_properties_typeProperties_url')]"
+					},
+					"LS_Adls_Azsql_properties_typeProperties_url": {
+						"value": "[parameters('LS_Adls_Azsql_properties_typeProperties_url')]"
+					},
+					"FileServer1_properties_typeProperties_host": {
+						"value": "[parameters('FileServer1_properties_typeProperties_host')]"
+					},
+					"FileServer1_properties_typeProperties_userId": {
+						"value": "[parameters('FileServer1_properties_typeProperties_userId')]"
+					},
+					"LS_FileServer_json data_properties_typeProperties_host": {
+						"value": "[parameters('LS_FileServer_json data_properties_typeProperties_host')]"
+					},
+					"LS_FileServer_json data_properties_typeProperties_userId": {
+						"value": "[parameters('LS_FileServer_json data_properties_typeProperties_userId')]"
+					},
+					"ls_FileServer_blob_properties_typeProperties_host": {
+						"value": "[parameters('ls_FileServer_blob_properties_typeProperties_host')]"
+					},
+					"ls_FileServer_blob_properties_typeProperties_userId": {
+						"value": "[parameters('ls_FileServer_blob_properties_typeProperties_userId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "az-adf-mp_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_onprem_blobsqlserver_connectionString": {
+						"value": "[parameters('ls_onprem_blobsqlserver_connectionString')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'az-adf-mp_ArmTemplate_0')]"
+			]
+		}
+	]
+}

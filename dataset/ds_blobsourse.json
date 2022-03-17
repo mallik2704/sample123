@@ -1,0 +1,24 @@
+{
+	"name": "ds_blobsourse",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BLOB_SOURSE",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "2022",
+				"container": "inputazblobsoursemp"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

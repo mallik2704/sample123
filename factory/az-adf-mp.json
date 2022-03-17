@@ -1,0 +1,9 @@
+{
+	"name": "az-adf-mp",
+	"location": "japaneast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "819eda92-a801-4704-bf52-ac1d525a658e",
+		"tenantId": "d1f2401e-dd6b-497e-bf9f-ae14cf8c7919"
+	}
+}

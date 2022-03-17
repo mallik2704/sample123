@@ -1,0 +1,22 @@
+{
+	"name": "getmeta_sourse_parqut",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_PAQUET",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "userdata (1).parquet",
+				"folderPath": "output_adlsgen2_destination/2022/pro2/parqut file",
+				"fileSystem": "output-adlsgen2"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "ls_onprem_blobsqlserver",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=DESKTOP-HRQPCN0\\MALLIK;initial catalog=DWDiagnostics;user id=sa",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwYWJkMTkyOS01MjZhLTQ2YzItOGNhOC01ODU2YTgzZWVlNWUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "selfhosted-IR-MP",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"name": "selfhosted-IR-MP",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

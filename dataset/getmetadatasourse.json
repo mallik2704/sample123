@@ -1,0 +1,21 @@
+{
+	"name": "getmetadatasourse",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_PAQUET",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "output_adlsgen2_destination/2022/pro2/parqut file",
+				"fileSystem": "output-adlsgen2"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

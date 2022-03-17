@@ -1,0 +1,17 @@
+{
+	"name": "ds_onpremsqlserver",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_onprem_blobsqlserver",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "pdw_component_alerts_data"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

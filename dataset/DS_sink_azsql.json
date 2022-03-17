@@ -1,0 +1,17 @@
+{
+	"name": "DS_sink_azsql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_adls_to_azsql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "",
+			"table": "userdata2.parquet"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
